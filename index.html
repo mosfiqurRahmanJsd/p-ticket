@@ -15,12 +15,6 @@
         rel="stylesheet">
 
 
-    <!--  using inter fonts
-
-    font-family: "Inter", sans-serif;
-    font-family: "Raleway", sans-serif;
-
-     -->
 
     <!-- daisy ui and tailwind cnd -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -71,11 +65,11 @@
 
 
         <!-- this is our herobox section -->
-        <section class="mb-32 container mx-auto relative">
+        <section class="mb-32 container mx-auto md:relative">
             <div class="hero min-h-screen" style="background-image: url('./images/banner.png');">
                 <div class="hero-overlay rounded-2xl bg-opacity-50"></div>
                 <div class="hero-content text-center text-neutral-content">
-                    <div class="">
+                    <div class="max-w-full">
                         <h1 class="mb-5 text-5xl font-[Raleway] text-[64px] font-extrabold text-white">End-to-End Travel
                             with </h1>
                         <h1 class=" font-[Raleway] text-[64px] font-extrabold text-[#1DD100] ">P Paribahan</h1>
@@ -92,8 +86,8 @@
                 </div>
             </div>
 
-            <!-- herobox bottom -->
-            <div class="flex gap-6  absolute top-[650px] left-1/4 ">
+            <!-- herobox footer -->
+            <div class="flex flex-col md:flex-row gap-6  md:absolute bottom-[-80px] left-1/4">
                 <div class="border-[#1DD100] border-b-4 flex gap-4 px-8 py-9 rounded-3xl bg-white">
                     <div>
                         <img src="./images/people.png" alt="">
@@ -126,10 +120,59 @@
 
         </section>
 
-
     </header>
 
     <main>
+        <!-- best offer section -->
+        <section class="container mx-auto text-center mb-28">
+            <h2 class="text-4xl font-bold font-[Raleway] text-center mb-12"> Best offers for you</h2>
+            <div class="flex flex-col md:flex-row  justify-evenly mb-16">
+                <div class="bg-[#FFBF0F] flex rounded-3xl md:relative md:mb-0 mb-8">
+                    <div class="md:p-14 px-5 py-5 border-r-2 left-0 border-dashed">
+                        <h2 class="font-[Inter] text-5xl font-extrabold leading-9">15% OFF</h2>
+                        <h4 class="font-[Inter] text-xl font-semibold leading-9">on your next purchase</h4>
+                        <p class="font-[Inter] text-lg font-medium leading-9">use by January 2024</p>
+                    </div>
+                    <div
+                        class="w-12 right-1 h-12 hidden md:block md:absolute bg-white rounded-full left-[304px] top-[-22px]">
+                    </div>
+                    <div
+                        class="w-12 right-1 h-12 hidden md:block md:absolute bg-white rounded-full left-[304px] top-[193px]">
+                    </div>
+                    <div class="md:p-14 px-5 py-5">
+                        <h2 class="font-[Raleway] leading-9 text-4xl font-bold">NEW15</h2>
+                        <h4 class="font-[Raleway] leading-9 text-xl font-medium">Coupon Code</h4>
+                    </div>
+
+                </div>
+
+
+                <div class="bg-[#F78C9C] flex rounded-3xl md:relative">
+                    <div class="md:p-14 px-5 py-5 border-r-2 left-0 border-dashed">
+                        <h2 class="font-[Inter] text-5xl font-extrabold leading-9">20% OFF</h2>
+                        <h4 class="font-[Inter] text-xl font-semibold leading-9">on your next purchase</h4>
+                        <p class="font-[Inter] text-lg font-medium leading-9">use by January 2024</p>
+                    </div>
+                    <div
+                        class="w-12 right-1 h-12 hidden md:block md:absolute bg-white rounded-full left-[304px] top-[-22px]">
+                    </div>
+                    <div
+                        class="w-12 right-1 h-12 hidden md:block md:absolute bg-white rounded-full left-[304px] top-[193px]">
+                    </div>
+                    <div class="md:p-14 px-5 py-5">
+                        <h2 class="font-[Raleway] leading-9 text-4xl font-bold">Couple 20</h2>
+                        <h4 class="font-[Raleway] leading-9 text-xl font-medium">Coupon Code</h4>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <button
+                class="btn  hover:text-white  border-[#1DD100] text-xl text-[#1DD100] rounded-lg px-7 bg-[#E8FAE5]">See
+                All Offers
+            </button>
+        </section>
 
 
     </main>
