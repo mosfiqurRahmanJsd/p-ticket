@@ -5,8 +5,9 @@
 
 
 
-const leftSeat = document.getElementById('leftSeat');
-const addedSeat = document.getElementById('seat');
+const leftSeatElement = document.getElementById('leftSeat');
+const addedSeatElement = document.getElementById('seat');
+const seletedSeatElement = document.getElementById('seletedSeat');
 
 function handleClick(event) {
 
@@ -16,14 +17,30 @@ function handleClick(event) {
 
 
     // left seat 
-    const avalableSeat = leftSeat.innerText - 1;
-    leftSeat.innerText = avalableSeat;
+    const avalableSeat = leftSeatElement.innerText - 1;
+    leftSeatElement.innerText = avalableSeat;
 
 
     // added seat 
-    const addSeat = addedSeat.innerText;
+    const addSeat = addedSeatElement.innerText;
     const addedSeatCount = parseFloat(addSeat);
-    addedSeat.innerText = addedSeatCount + 1;
+    addedSeatElement.innerText = addedSeatCount + 1;
+
+
+
+
+
+    const tr = document.createElement('tr');
+    tr.classList.add('border-none')
+    tr.innerHTML = `
+        <td>${event.target.innerText}</td>
+        <td>Economoy</td>
+        <td>550</td>
+    `
+
+    seletedSeatElement.appendChild(tr);
+
+
 
 
 
