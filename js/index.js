@@ -17,8 +17,20 @@ for (const clickableSeat of allClickableSeat) {
         if (seatCollection.includes(seatNumber)) {
             alert('Seat Adready Aded!')
         } else {
+            // availabe seat count
+            const avalableSeat = getElementValueById('leftSeat');
+            leftSeatElement.innerText = avalableSeat - 1;
+
+
+            // add seat count
+            const addedSeat = getElementValueById('seat');
+            addedSeatElement.innerText = addedSeat + 1;
+
+            // seat background color and text color
             event.target.style.backgroundColor = '#1DD100';
             event.target.style.color = 'white';
+
+            // added new seat
             const tr = document.createElement('tr');
             tr.classList.add('border-none')
             tr.innerHTML = `
@@ -29,16 +41,7 @@ for (const clickableSeat of allClickableSeat) {
             seletedSeatElement.appendChild(tr);
             seatCollection.push(seatNumber);
 
-
-            // availabe seat 
-            const avalableSeat = getElementValueById('leftSeat');
-            leftSeatElement.innerText = avalableSeat - 1;
-
-
-            // add seat 
-            const addedSeat = getElementValueById('seat');
-            addedSeatElement.innerText = addedSeat + 1;
-
+            updateTotalPrice(seatPrice);
 
         }
 
@@ -49,12 +52,21 @@ for (const clickableSeat of allClickableSeat) {
 
 
 
+
+function updateTotalPrice(value) {
+    const totalPrice = getElementValueById('total-price');
+    document.getElementById('total-price').innerText = totalPrice + value;
+}
+
+
+
+
+
 function getElementValueById(elementId) {
     const elementValue = document.getElementById(elementId).innerText;
     const numberValue = parseInt(elementValue);
     return numberValue;
 }
-
 
 
 
