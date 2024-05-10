@@ -430,9 +430,9 @@
 
                         </table>
                         <label class="input rounded-2xl flex items-center gap-2 h-14">
-                            <input type="text" class="grow " placeholder="Have any copupon?" />
-                            <button disabled
-                                class="font-[Inter]  text-xl font-medium text-white px-4 py-2 rounded-xl bg-[#1DD100]  "
+                            <input id="copupon" type="text" class="grow " placeholder="Have any copupon?" />
+                            <button id="apply-btn"
+                                class="font-[Inter]  text-xl font-medium px-4 py-2 rounded-xl text-[#7D8085]  bg-[#F7F8F8]   "
                                 href="#0">Apply</button>
                         </label>
 
@@ -458,9 +458,29 @@
                         <input id="email" type="email" placeholder="Enter Your E mail"
                             class="input input-bordered w-full my-4 h-14" />
 
-                        <input id="next-btn"
-                            class=" btn-disabled text-[#7D8085] px-11  bg-[#F7F8F8] font-[Inter] text-xl font-extrabold w-full py-5 rounded-lg"
-                            type="submit" value="Next">
+                        <a id="next-btn" href="#my_modal_8"
+                            class="btn-disabled text-[#7D8085] px-11  bg-[#F7F8F8] font-[Inter] text-xl font-extrabold w-full py-5 rounded-lg inline-block text-center">Next</a>
+
+
+
+                        <!-- this is our success page | always hiddn only show complete purchase -->
+                        <div id="my_modal_8" class="hero modal  min-h-screen bg-[#F2F1F1]">
+                            <div class="hero-content text-center bg-white p-20 rounded-lg">
+                                <div class="max-w-md ">
+                                    <img class="mx-auto" src="./images/success.png" alt="">
+                                    <h3 class="text-[#23A58E] font-bold text-2xl my-9">SUCCESS</h3>
+                                    <p class="text-xl font-medium text-[#4A4A4A] mb-4">Thank you for Booking Our Bus
+                                        Seats. <br>
+
+                                        We are working hard to find the best service and deals for you. </p>
+                                    <p class="text-xl text-[#4A4A4A] font-light">Shortly you will find a
+                                        confirmation in
+                                        your email.</p>
+                                    <a href="index.html"
+                                        class="btn mt-5 btn-success text-white rounded-3xl px-20  text-xl">Continue</a>
+                                </div>
+                            </div>
+                        </div>
 
 
                     </form>
@@ -480,20 +500,7 @@
         </section>
 
 
-        <!-- this is our success page | always hiddn only show complete purchase -->
-        <div class="hero hidden min-h-screen bg-[#F2F1F1]">
-            <div class="hero-content text-center bg-white p-20 rounded-lg">
-                <div class="max-w-md ">
-                    <img class="mx-auto" src="./images/success.png" alt="">
-                    <h3 class="text-[#23A58E] font-bold text-2xl my-9">SUCCESS</h3>
-                    <p class="text-xl font-medium text-[#4A4A4A] mb-4">Thank you for Booking Our Bus Seats. <br>
 
-                        We are working hard to find the best service and deals for you. </p>
-                    <p class="text-xl text-[#4A4A4A] font-light">Shortly you will find a confirmation in your email.</p>
-                    <button class="btn mt-5 btn-success text-white rounded-3xl px-20  text-xl">Continue</button>
-                </div>
-            </div>
-        </div>
 
 
     </main>

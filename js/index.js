@@ -4,6 +4,8 @@ const leftSeatElement = document.getElementById('leftSeat');
 const addedSeatElement = document.getElementById('seat');
 const phoneInput = document.getElementById('phone');
 const nextBtn = document.getElementById('next-btn');
+const applyBtn = document.getElementById('apply-btn');
+const copuponInput = document.getElementById('copupon');
 
 
 
@@ -44,7 +46,11 @@ for (const clickableSeat of allClickableSeat) {
 
         if (seatCollection.includes(seatNumber)) {
             alert('Seat Adready Aded!')
-        } else {
+        } else if (seatCollection.length > 3) {
+            alert('Maximum 4 Ticket Buy Now. ')
+        }
+
+        else {
 
             // availabe seat count
             const avalableSeat = getElementValueById('leftSeat');
@@ -71,13 +77,21 @@ for (const clickableSeat of allClickableSeat) {
             seatCollection.push(seatNumber);
 
             totalSeat = seatCollection.length;
+            if (seatCollection.length === 4) {
+                applyBtn.style.backgroundColor = '#1DD100';
+                applyBtn.style.color = 'white';
+            }
 
             updateTotalPrice(seatPrice);
             updateGrandTotal(seatPrice);
-
             nextBtnEnable();
 
+
+
+
         }
+
+
 
     })
 }
@@ -87,17 +101,36 @@ phoneInput.addEventListener('input', nextBtnEnable);
 
 
 
+applyBtn.addEventListener('click', function () {
+    let copupon = copuponInput.value;
+    if (copupon === 'NEW15') {
+        console.log('you got 15%')
+
+    } else if (copupon === 'Couple 20') {
+        console.log('20% offf')
+    } else {
+        alert('you copuifdifo nai')
+    }
+})
+
+
+
 
 
 function updateTotalPrice(value) {
     const totalPrice = getElementValueById('total-price');
-    document.getElementById('total-price').innerText = totalPrice + value;
+    let totalPriceValue = totalPrice + value;
+    document.getElementById('total-price').innerText = totalPriceValue;
 }
 
 function updateGrandTotal(value) {
     const grandTotalPrice = getElementValueById('grand-total');
     document.getElementById('grand-total').innerText = grandTotalPrice + value;
+
 }
+
+
+
 
 
 
