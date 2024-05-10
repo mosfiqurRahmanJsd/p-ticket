@@ -10,6 +10,8 @@ const copuponInput = document.getElementById('copupon');
 
 
 
+
+
 // navigate to ticket section smooth scrool
 function navigatSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -87,8 +89,6 @@ for (const clickableSeat of allClickableSeat) {
             nextBtnEnable();
 
 
-
-
         }
 
 
@@ -100,16 +100,29 @@ for (const clickableSeat of allClickableSeat) {
 phoneInput.addEventListener('input', nextBtnEnable);
 
 
-
+const coupuponElement = document.getElementById('copupon-input');
+const discountElement = document.getElementById('discount-price');
+const discountTr = document.getElementById('discount');
 applyBtn.addEventListener('click', function () {
     let copupon = copuponInput.value;
+    let totalPriceValue = getElementValueById('total-price')
+    console.log(totalPriceValue);
     if (copupon === 'NEW15') {
-        console.log('you got 15%')
-
+        const discount = totalPriceValue * .15;
+        coupuponElement.classList.add('hidden');
+        discountElement.innerText = discount;
+        discountTr.classList.remove('hidden');
+        const grandTotal = totalPriceValue - discount;
+        document.getElementById('grand-total').innerText = grandTotal;
     } else if (copupon === 'Couple 20') {
-        console.log('20% offf')
+        const discount = totalPriceValue * .20;
+        coupuponElement.classList.add('hidden');
+        discountElement.innerText = discount;
+        discountTr.classList.remove('hidden');
+        const grandTotal = totalPriceValue - discount;
+        document.getElementById('grand-total').innerText = grandTotal;
     } else {
-        alert('you copuifdifo nai')
+        alert('Please! Insert a Valid Copupon Code');
     }
 })
 
@@ -123,9 +136,9 @@ function updateTotalPrice(value) {
     document.getElementById('total-price').innerText = totalPriceValue;
 }
 
-function updateGrandTotal(value) {
+function updateGrandTotal(grandTotal) {
     const grandTotalPrice = getElementValueById('grand-total');
-    document.getElementById('grand-total').innerText = grandTotalPrice + value;
+    document.getElementById('grand-total').innerText = grandTotalPrice + grandTotal;
 
 }
 
