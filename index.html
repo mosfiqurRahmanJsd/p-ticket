@@ -79,7 +79,7 @@
                             within
                             the app. The <br>
                             integrated testing features allow for a streamlined .</p>
-                        <a href="#paribahan"
+                        <a onclick="navigatSection('paribahan')"
                             class=" btn font-[Raleway] bg-[#1DD100] text-[#030712] text-xl border-none pt-3 pb-3 px-7 rounded-lg hover:bg-[#E8FAE5] hover:text-[#1DD100]">Buy
                             Tickets</a>
                     </div>
@@ -431,13 +431,14 @@
                         </table>
                         <label class="input rounded-2xl flex items-center gap-2 h-14">
                             <input type="text" class="grow " placeholder="Have any copupon?" />
-                            <a class="font-[Inter] text-xl font-medium text-white px-4 py-2 rounded-xl bg-[#1DD100]  "
-                                href="#0">Apply</a>
+                            <button disabled
+                                class="font-[Inter]  text-xl font-medium text-white px-4 py-2 rounded-xl bg-[#1DD100]  "
+                                href="#0">Apply</button>
                         </label>
 
-                        <p class="mt-6 px-8 text-base text-black font-[Inter] font-bold flex justify-between">
+                        <p class="mt-6 ps-5 pe-10 text-base text-black font-[Inter] font-bold flex justify-between">
                             <span>Grand
-                                Total</span> <span>BDT 1000</span>
+                                Total</span> <span>BDT <span id="grand-total">0</span></span>
                         </p>
 
 
@@ -457,9 +458,10 @@
                         <input id="email" type="email" placeholder="Enter Your E mail"
                             class="input input-bordered w-full my-4 h-14" />
 
-                        <input
-                            class="bg-[#1DD100] text-white font-[Inter] text-xl font-extrabold w-full py-5 rounded-lg"
+                        <input id="next-btn"
+                            class=" btn-disabled text-[#7D8085] px-11  bg-[#F7F8F8] font-[Inter] text-xl font-extrabold w-full py-5 rounded-lg"
                             type="submit" value="Next">
+
 
                     </form>
                     <div class="mt-6 flex justify-evenly">
